@@ -135,7 +135,7 @@ def temp_breakdown(start): #Returns a list of the minimum temp, the average temp
     #Converts to df and uses describe() to find the max, min, and mean
     data_df = pd.DataFrame(data)
     described = data_df.describe()
-    
+
     return(
         f'Starting Date: {start}<br/>'
         f'minimum temp: {described.iloc[3,0]}<br/>'
@@ -144,8 +144,30 @@ def temp_breakdown(start): #Returns a list of the minimum temp, the average temp
     )
 
 
-#@app.route("/api/v1.0/<start>/<end>")
+@app.route("/api/v1.0/<start>/<end>")
+def start_end_breakdown(start, end):
+    #Create session link
+    session = Session(engine)
 
+    #query all the data from the start date on
+    data = session.query(Measurement.tobs).\
+        filter(Measurement.date >= start).\
+        filter(Measurement.date <= end).all()
+    
+    session.close()
+
+    #Converts to df and uses describe() to find the max, min, and mean
+    data_df = pd.DataFrame(data)
+    described = data_df.describe()
+
+    return(
+        f'Starting Date: {start}<br/>'
+        f'Ending Date: {end}<br/>'
+        f'<br/>'
+        f'minimum temp: {described.iloc[3,0]}<br/>'
+        f'maximum temp: {described.iloc[7,0]}<br/>'
+        f'average temp: {round(described.iloc[1,0], 1)}'
+    )
 
 if __name__ == '__main__':
     app.run(debug = True)
