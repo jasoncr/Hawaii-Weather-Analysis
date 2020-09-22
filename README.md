@@ -17,6 +17,6 @@ Part 2 of the challenge is for me to work with a Flask server. I wanted to use F
 
 <img src = "Images/flask_routes.png" width=300>
 
-Also included is one example of the filtering. This was done using the user inputed date.
+Also included is one example of the filtering. This was done using the user inputed date and outputs the min, max, and average temperature for all the observations from the time.
 
 <img src = "Images/flask_start.png" width=300>
