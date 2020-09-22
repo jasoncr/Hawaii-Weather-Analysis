@@ -13,4 +13,10 @@ The most active station, WAIHEE 837.5, HI US and I found that the minimum temper
 <img src = "Images/temp_frequencies.png" width=600>
 
 
-Part 2 of the challenge is for me to work with a Flask server. I wanted to use Flask API to create croutes for me to be able to do some filtering of the sqlite data. I started with a home route that will list the possible routes. I wanted five routes: first route would show all of the date and precipitation observations, the second route would show a list of the ID and station names, the third would show the date and temp observations, fourth would filter the data by the user entered date, and the fifth would filter on start and end date. Below is an image of those routes.
+Part 2 of the challenge is for me to work with a Flask server. I wanted to use Flask API to create basic routes for me to be able to do some filtering of the sqlite data. I started with a home route that will list the possible routes. I wanted five routes: first route would show all of the date and precipitation observations, the second route would show a list of the ID and station names, the third would show the date and temp observations, fourth would filter the data by the user entered date, and the fifth would filter on start and end date. Below is an image of those routes in a browser.
+
+<img src = "Images/flask_routes.png" width=400>
+
+Also included is one example of the filtering. This was done using the user inputed date.
+
+<img src = "Images/flask_start.png" width=600>
