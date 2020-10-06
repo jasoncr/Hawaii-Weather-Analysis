@@ -1,4 +1,4 @@
-# sqlalchemy-challenge
+# Hawaii-Weather-Analysis
 
 In this challenge, I tested myself with SQLAlchemy and Flask. First, I wanted to use SQLAlchemy to do exploratory analysis on climate measurement stations. To do this, I worked inside a Jupyter Notebook and connected with SQLAlchemy to a sqlite file that held temperature and precipitaion observations from measurement stations around Hawaii. I used Pandas and matplotlib to create visualizations. The first visualization was a bar chart that looked at the last year's worth of observations. Below is that graph. 
 
